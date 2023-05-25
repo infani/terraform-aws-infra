@@ -1,4 +1,4 @@
-
+//https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codepipeline#example-usage
 resource "aws_codepipeline" "terraform_pipeline" {
 
   name     = "${var.name}-pipeline"

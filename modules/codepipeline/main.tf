@@ -23,6 +23,7 @@ resource "aws_codepipeline" "terraform_pipeline" {
         ConnectionArn    = "${var.connectionArn}"
         FullRepositoryId = "${var.fullRepositoryId}"
         BranchName       = "${var.branch}"
+        OutputArtifactFormat = "CODEBUILD_CLONE_REF"
       }
     }
   }

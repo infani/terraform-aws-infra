@@ -14,6 +14,6 @@ provider "aws" {
 
 module "infra_ec2" {
   source = "./modules/ec2"
-  instance_type = "t3.xlarge"
+  instance_type = "t3.large"
   key_name= "dev20230522"
 }

@@ -1,1 +1,3 @@
-# terraform-aws-infra
+# terraform cmd
+* terraform apply
+* terraform destroy

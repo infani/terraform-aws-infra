@@ -12,8 +12,15 @@ provider "aws" {
 #   branch           = "main"
 # }
 
-module "infra_ec2" {
-  source = "./modules/ec2"
-  instance_type = "t3.large"
-  key_name= "dev20230522"
+# module "infra_ec2" {
+#   source = "./modules/ec2"
+#   instance_type = "t3.large"
+#   key_name= "dev20230522"
+# }
+
+module "infra_codebuild_dev" {
+  source      = "./modules/codebuild"
+  name        = "test-dev"
+  gitLocation = "https://github.com/VIVOTEK-IT/vivoreco.git"
+  branch      = "main"
 }

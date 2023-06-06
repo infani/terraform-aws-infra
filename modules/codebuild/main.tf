@@ -32,6 +32,21 @@ resource "aws_codebuild_project" "example" {
 
 }
 
+resource "aws_codebuild_webhook" "example" {
+  project_name = aws_codebuild_project.example.name
+  filter_group {
+    filter {
+      type    = "EVENT"
+      pattern = "PUSH"
+    }
+
+    filter {
+      type    = "HEAD_REF"
+      pattern = "main"
+    }
+  }
+}
+
 resource "aws_iam_role" "codebuild_role" {
   name               = "${var.name}-codebuild-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json

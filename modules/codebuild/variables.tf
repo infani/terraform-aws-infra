@@ -9,3 +9,7 @@ variable "gitLocation" {
 
 variable "branch" {
 }
+
+variable "headRef" {
+  description = "git head ref, like refs/heads/main, ^refs/tags/.*-release, ^refs/tags/.*-prod"
+}

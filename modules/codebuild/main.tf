@@ -42,7 +42,7 @@ resource "aws_codebuild_webhook" "example" {
 
     filter {
       type    = "HEAD_REF"
-      pattern = "main"
+      pattern = var.headRef
     }
   }
 }

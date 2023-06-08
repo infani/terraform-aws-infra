@@ -1,7 +1,8 @@
 //https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codebuild_project
 resource "aws_codebuild_project" "example" {
-  name         = var.name
-  service_role = aws_iam_role.codebuild_role.arn
+  name                   = var.name
+  service_role           = aws_iam_role.codebuild_role.arn
+  concurrent_build_limit = 1
 
   artifacts {
     type = "NO_ARTIFACTS"
@@ -12,12 +13,6 @@ resource "aws_codebuild_project" "example" {
     image           = "aws/codebuild/standard:7.0"
     type            = "LINUX_CONTAINER"
     privileged_mode = true
-
-    environment_variable {
-      name  = "ENV_GIT_BRANCH"
-      value = var.branch
-    }
-
   }
 
   source {

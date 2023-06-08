@@ -7,9 +7,6 @@ variable "gitLocation" {
   description = "gitLocation, like https://github.com/VIVOTEK-IT/vivoreco.git"
 }
 
-variable "branch" {
-}
-
 variable "headRef" {
   description = "git head ref, like refs/heads/main, ^refs/tags/.*-release, ^refs/tags/.*-prod"
 }

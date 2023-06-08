@@ -22,6 +22,5 @@ module "infra_codebuild_dev" {
   source      = "./modules/codebuild"
   name        = "test-dev"
   gitLocation = "https://github.com/VIVOTEK-IT/vivoreco.git"
-  branch      = "main"
   headRef     = "refs/heads/main"
 }

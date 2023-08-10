@@ -6,3 +6,14 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 key name"
 }
+
+variable "vpc_id" {
+}
+
+variable "subnet_id" {
+  
+}
+
+variable "name" {
+  default = ""
+}
